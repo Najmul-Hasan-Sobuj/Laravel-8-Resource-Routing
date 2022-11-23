@@ -18,6 +18,32 @@ OR
 ```
 Route::resource('blogs', App\Http\Controllers\BlogController::class);
 ```
+
+```
+use App\Http\Controllers\BlogController;
+
+Route::get('blogs', [BlogController::class, 'index']);
+Route::get('blogs/create', [BlogController::class, 'create']);
+Route::post('blogs', [BlogController::class, 'store']);
+Route::get('blogs/{blog}/edit', [BlogController::class, 'edit']);
+Route::put('blogs/{blog}', [BlogController::class, 'update']);
+Route::get('blogs/{blog}', [BlogController::class, 'show']);
+Route::delete('blogs/{blog}', [BlogController::class, 'destroy']);
+```
+
+OR
+
+```
+Route::get('blogs', [App\Http\Controllers\BlogController::class, 'index']);
+Route::get('blogs/create', [App\Http\Controllers\BlogController::class, 'create']);
+Route::post('blogs', [App\Http\Controllers\BlogController::class, 'store']);
+Route::get('blogs/{blog}/edit', [App\Http\Controllers\BlogController::class, 'edit']);
+Route::put('blogs/{blog}', [App\Http\Controllers\BlogController::class, 'update']);
+Route::get('blogs/{blog}', [App\Http\Controllers\BlogController::class, 'show']);
+Route::delete('blogs/{blog}', [App\Http\Controllers\BlogController::class, 'destroy']);
+```
+
+
 Now, you can run bellow command and check route lists:
 
 ```
