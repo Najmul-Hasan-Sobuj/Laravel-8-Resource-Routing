@@ -1,4 +1,4 @@
-# Laravel-8-Resource-Routing
+# Laravel-8 Resource-Routing and Resource-Controller
 
 ### Resource Route: routes/web.php
 
